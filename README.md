@@ -14,3 +14,5 @@ Program flashes Red/Green/Blue lights in really short intervals by default.
 - [X] \Detection of each screen resolution and match app size.
 - [X] \Possibility to change time interval.
 - [X] \Working keyboard shortcuts.
+
+Thanks for your visit :+1:
