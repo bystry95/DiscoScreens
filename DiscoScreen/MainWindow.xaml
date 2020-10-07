@@ -1,0 +1,43 @@
+﻿<Window x:Class="DiscoScreen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DiscoScreen"
+        x:Name="_mainWindow"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="Manual"
+        Left="0"
+        Top="0"
+        Title="DiscroScreen" Height="1" Width="1">
+
+    <Window.CommandBindings>
+        <CommandBinding Command="local:CustomMenuCommands.CloseApp"
+                    CanExecute="CommandBinding_CanExecute"
+                    Executed="CommandBinding_Executed"
+                    />
+        <CommandBinding Command="local:CustomMenuCommands.HideShowMenu"
+                    CanExecute="CommandBinding_CanExecute_1"
+                    Executed="CommandBinding_Executed_1"
+                    />
+    </Window.CommandBindings>
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" x:Name="topmenu">
+            <MenuItem Header="Press F1 to hide/show menu." Command="local:CustomMenuCommands.HideShowMenu" Foreground="Black"/>
+            <MenuItem Header="Press F2 to Exit." Command="local:CustomMenuCommands.CloseApp" Foreground="Black"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Interval: "/>
+                <TextBox x:Name="intervalbox" Width="50">
+                    <TextBox.ToolTip>
+                        <TextBlock Text="Value estimates how often background color will change. Should be provided in milliseconds."/>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <Button Content="Confirm" Margin="5,0,0,0" Click="Button_Click"/>
+            </StackPanel>
+        </Menu>
+        <TextBlock DockPanel.Dock="Bottom" x:Name="MainTextBlock" Background="Red"/>
+    </DockPanel>
+</Window>
