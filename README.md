@@ -10,9 +10,9 @@ Program flashes Red/Green/Blue lights in really short intervals by default.
 - Interval field value estimates how often background color will change. Should be provided in ***milliseconds***.
 
 ### Features
-- [X] \Detection how many screens are available and opens windows on each of them.
-- [X] \Detection of each screen resolution and match app size.
-- [X] \Possibility to change time interval.
-- [X] \Working keyboard shortcuts.
+- [X] Detection how many screens are available and opens windows on each of them.
+- [X] Detection of each screen resolution and match app size.
+- [X] Possibility to change time interval.
+- [X] Working keyboard shortcuts.
 
 Thanks for your visit :+1:
